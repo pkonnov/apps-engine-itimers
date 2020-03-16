@@ -5,6 +5,7 @@ import {
     IHttp,
     IHttpExtend,
     IModify,
+    INet,
     IPersistence,
     IRead,
 } from '../../definition/accessors';
@@ -19,6 +20,7 @@ import {
     LivechatRead,
     MessageRead,
     Modify,
+    Net,
     Notifier,
     Persistence,
     PersistenceRead,
@@ -45,6 +47,7 @@ export class AppAccessorManager {
     private readonly modifiers: Map<string, IModify>;
     private readonly persists: Map<string, IPersistence>;
     private readonly https: Map<string, IHttp>;
+    private readonly nets: Map<string, INet>;
 
     constructor(private readonly manager: AppManager) {
         this.bridges = this.manager.getBridges();
@@ -55,6 +58,7 @@ export class AppAccessorManager {
         this.modifiers = new Map<string, IModify>();
         this.persists = new Map<string, IPersistence>();
         this.https = new Map<string, IHttp>();
+        this.nets = new Map<string, INet>();
     }
 
     /**
@@ -70,6 +74,7 @@ export class AppAccessorManager {
         this.modifiers.delete(appId);
         this.persists.delete(appId);
         this.https.delete(appId);
+        this.nets.delete(appId);
     }
 
     public getConfigurationExtend(appId: string): IConfigurationExtend {
@@ -167,5 +172,12 @@ export class AppAccessorManager {
         }
 
         return this.https.get(appId);
+    }
+
+    public getNet(appId: string): INet {
+        if (!this.nets.has(appId)) {
+            this.nets.set(appId, new Net(this.bridges));
+        }
+        return this.nets.get(appId);
     }
 }

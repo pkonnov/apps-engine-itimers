@@ -14,6 +14,7 @@ import { Modify } from './Modify';
 import { ModifyCreator } from './ModifyCreator';
 import { ModifyExtender } from './ModifyExtender';
 import { ModifyUpdater } from './ModifyUpdater';
+import { Net } from './Net';
 import { Notifier } from './Notifier';
 import { Persistence } from './Persistence';
 import { PersistenceRead } from './PersistenceRead';
@@ -48,6 +49,7 @@ export {
     ModifyCreator,
     ModifyExtender,
     ModifyUpdater,
+    Net,
     Notifier,
     Persistence,
     PersistenceRead,

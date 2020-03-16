@@ -9,6 +9,7 @@ import { IInternalBridge } from './IInternalBridge';
 import { IListenerBridge } from './IListenerBridge';
 import { ILivechatBridge } from './ILivechatBridge';
 import { IMessageBridge } from './IMessageBridge';
+import { INetBridge } from './INetBridge';
 import { IPersistenceBridge } from './IPersistenceBridge';
 import { IRoomBridge } from './IRoomBridge';
 import { IServerSettingBridge } from './IServerSettingBridge';
@@ -23,6 +24,7 @@ export {
     IListenerBridge,
     ILivechatBridge,
     IMessageBridge,
+    INetBridge,
     IPersistenceBridge,
     IAppActivationBridge,
     IAppDetailChangesBridge,

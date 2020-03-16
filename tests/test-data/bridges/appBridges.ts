@@ -8,6 +8,7 @@ import {
     IListenerBridge,
     ILivechatBridge,
     IMessageBridge,
+    INetBridge,
     IPersistenceBridge,
     IRoomBridge,
     IServerSettingBridge,
@@ -24,6 +25,7 @@ import { TestsHttpBridge } from './httpBridge';
 import { TestsInternalBridge } from './internalBridge';
 import { TestLivechatBridge } from './livechatBridge';
 import { TestsMessageBridge } from './messageBridge';
+import { TestsNetBridge } from './netBridge';
 import { TestsPersisBridge } from './persisBridge';
 import { TestsRoomBridge } from './roomBridge';
 import { TestsServerSettingBridge } from './serverSettingBridge';
@@ -47,6 +49,7 @@ export class TestsAppBridges extends AppBridges {
     private readonly livechatBridge: TestLivechatBridge;
     private readonly uploadBridge: TestUploadBridge;
     private readonly uiIntegrationBridge: TestsUiIntegrationBridge;
+    private readonly netBridge: TestsNetBridge;
 
     constructor() {
         super();
@@ -65,6 +68,7 @@ export class TestsAppBridges extends AppBridges {
         this.livechatBridge = new TestLivechatBridge();
         this.uploadBridge = new TestUploadBridge();
         this.uiIntegrationBridge = new TestsUiIntegrationBridge();
+        this.netBridge = new TestsNetBridge();
     }
 
     public getCommandBridge(): TestsCommandBridge {
@@ -129,5 +133,9 @@ export class TestsAppBridges extends AppBridges {
 
     public getUiInteractionBridge(): IUiInteractionBridge {
         return this.uiIntegrationBridge;
+    }
+
+    public getNetBridge(): INetBridge {
+        return this.netBridge;
     }
 }
