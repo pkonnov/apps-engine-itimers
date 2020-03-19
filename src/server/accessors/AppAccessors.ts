@@ -1,4 +1,4 @@
-import { IAppAccessors, IEnvironmentRead, IHttp, INet, IRead } from '../../definition/accessors';
+import { IAppAccessors, IEnvironmentRead, IHttp, INet, IRead, ITimers } from '../../definition/accessors';
 import { IApiEndpointMetadata } from '../../definition/api';
 import { AppManager } from '../AppManager';
 import { AppAccessorManager } from '../managers/AppAccessorManager';
@@ -31,5 +31,9 @@ export class AppAccessors implements IAppAccessors {
 
     public get net(): INet {
         return this.accessorManager.getNet(this.appId);
+    }
+
+    public get timers(): ITimers {
+        return this.accessorManager.getTimers(this.appId);
     }
 }

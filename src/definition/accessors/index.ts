@@ -41,6 +41,7 @@ import { ISettingRead } from './ISettingRead';
 import { ISettingsExtend } from './ISettingsExtend';
 import { ISlashCommandsExtend } from './ISlashCommandsExtend';
 import { ISlashCommandsModify } from './ISlashCommandsModify';
+import { ITimers } from './ITimers';
 import { IUIController } from './IUIController';
 import { IUploadRead } from './IUploadRead';
 import { IUserBuilder } from './IUserBuilder';
@@ -80,6 +81,7 @@ export {
     IRoomBuilder,
     IRoomExtender,
     IRoomRead,
+    ITimers,
     IServerSettingRead,
     IServerSettingsModify,
     ISettingRead,

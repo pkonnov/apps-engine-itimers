@@ -28,6 +28,7 @@ import { SettingRead } from './SettingRead';
 import { SettingsExtend } from './SettingsExtend';
 import { SlashCommandsExtend } from './SlashCommandsExtend';
 import { SlashCommandsModify } from './SlashCommandsModify';
+import { Timers } from './Timers';
 import { UploadRead } from './UploadRead';
 import { UserBuilder } from './UserBuilder';
 import { UserRead } from './UserRead';
@@ -63,6 +64,7 @@ export {
     SettingsExtend,
     SlashCommandsExtend,
     SlashCommandsModify,
+    Timers,
     UploadRead,
     UserBuilder,
     UserRead,

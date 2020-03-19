@@ -13,6 +13,7 @@ import { INetBridge } from './INetBridge';
 import { IPersistenceBridge } from './IPersistenceBridge';
 import { IRoomBridge } from './IRoomBridge';
 import { IServerSettingBridge } from './IServerSettingBridge';
+import { ITimersBridge } from './ITimersBridge';
 import { IUiInteractionBridge } from './IUiInteractionBridge';
 import { IUploadBridge } from './IUploadBridge';
 import { IUserBridge } from './IUserBridge';
@@ -33,6 +34,7 @@ export {
     IRoomBridge,
     IInternalBridge,
     IServerSettingBridge,
+    ITimersBridge,
     IUserBridge,
     IUploadBridge,
     IUiInteractionBridge,

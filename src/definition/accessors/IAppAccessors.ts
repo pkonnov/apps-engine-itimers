@@ -1,4 +1,4 @@
-import { IEnvironmentRead, IHttp, INet, IRead } from '../../definition/accessors';
+import { IEnvironmentRead, IHttp, INet, IRead, ITimers } from '../../definition/accessors';
 import { IApiEndpointMetadata } from '../api';
 
 export interface IAppAccessors {
@@ -7,4 +7,5 @@ export interface IAppAccessors {
     readonly http: IHttp;
     readonly net: INet;
     readonly providedApiEndpoints: Array<IApiEndpointMetadata>;
+    readonly timers: ITimers;
 }
